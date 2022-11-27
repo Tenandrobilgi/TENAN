@@ -1,0 +1,51 @@
+{
+  "name": "tenan",
+  "version": "1.0.0",
+  "description": "TENAN_Beta",
+  "main": "tenanmain.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ANDRO",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/builders": "^0.6.0",
+    "@discordjs/rest": "^0.1.0-canary.0",
+    "axios": "^0.23.0",
+    "booru": "^2.4.2",
+    "cheerio": "^1.0.0-rc.10",
+    "cheerio-select": "^1.5.0",
+    "css-select": "^4.1.3",
+    "dadjokes-wrapper": "^0.1.4",
+    "detectlanguage": "^2.1.0",
+    "discord-api-types": "^0.23.1",
+    "discord-hentai": "^1.1.1",
+    "discord-nsfw": "^1.3.0",
+    "discord.js": "^14.2.0",
+    "domutils": "^2.8.0",
+    "g-i-s": "^2.1.6",
+    "got": "^11.8.2",
+    "http-cookie-agent": "^4.0.1",
+    "image-search-google": "^1.3.0",
+    "ms": "^2.1.2",
+    "mysql": "^2.18.1",
+    "nhentai-api": "^3.4.3",
+    "node-fetch": "^3.2.0",
+    "node.js": "^0.0.1-security",
+    "nraw": "^0.2.5",
+    "pornsearch": "^0.3.1",
+    "quick.db": "^7.1.3",
+    "redditwrap.js": "^7.0.0",
+    "request": "^2.88.2",
+    "require-dir": "^1.2.0",
+    "superagent": "^6.1.0",
+    "tough-cookie": "^4.0.0",
+    "trace.moe": "^1.1.1",
+    "xkcd-api": "^1.0.1",
+    "xml2js": "^0.4.23"
+  },
+  "engines": {
+    "node": "v16.x",
+    "npm": "7.24.0"
+  }
+}

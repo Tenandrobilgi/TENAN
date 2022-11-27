@@ -1,0 +1,9 @@
+{
+    "TOKEN": "", 
+    "MAINTENANCEMODE": false,
+    "PROTECTEDUSERID": "",
+    "PROTECTEDGUILDID": "",
+    "PUBLISHCOMMANDS": false,
+    "DEFAULTPREFIX": ".",
+    "TIMEOUTWAITAMOUNT": 3
+}
