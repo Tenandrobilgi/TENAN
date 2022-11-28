@@ -1,6 +1,7 @@
 // Import Modules
 
 const Discord = require('discord.js')
+const config = require('./../../../config.json')
 const { checkForMaintenance } = require('../checkForMaintenance')
 const { checkForUser, autoHandleTimeout } = require('./../../Timeout/userTimeoutHandler')
 const { getBotPrefix } = require('./../../Commands/Tools/get-data')
