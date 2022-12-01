@@ -8,7 +8,7 @@ const config = require('../../../config.json')
 
 function getServerLogChannel(guild) {
     return new Promise(function (resolve, reject) {
-        database.query(`SELECT serverLogChannelID FROM ServerDatas WHERE serverId = '${guild.id}'`, function (err, rows) {
+        database.query(`SELECT serverLogChannelID FROM serverdatas WHERE serverId = '${guild.id}'`, function (err, rows) {
             if (err) {
                 console.log(err);
                 reject(err);
@@ -21,7 +21,7 @@ function getServerLogChannel(guild) {
 
 function getServerLogEnabled(guild) {
     return new Promise(function (resolve, reject) {
-        database.query(`SELECT serverLogEnabled FROM ServerDatas WHERE serverId = '${guild.id}'`, function (err, rows) {
+        database.query(`SELECT serverLogEnabled FROM serverdatas WHERE serverId = '${guild.id}'`, function (err, rows) {
             if (err) {
                 console.log(err);
                 reject(err);
@@ -52,7 +52,7 @@ function start(client) {
             }
         }
         console.log(`Joined the server: ${guild.name}. Saving to database....`)
-        database.query(`INSERT INTO ServerDatas (serverId, serverPrefix, serverModules, serverLogChannelID, serverLogEnabled, customResponse) VALUES ('${guild.id}', '${config.DEFAULTPREFIX}', '${JSON.stringify(ModuleData)}', '0', 'false', 'true')`, err => {
+        database.query(`INSERT INTO serverdatas (serverId, serverPrefix, serverModules, serverLogChannelID, serverLogEnabled, customResponse) VALUES ('${guild.id}', '${config.DEFAULTPREFIX}', '${JSON.stringify(ModuleData)}', '0', 'false', 'true')`, err => {
             if (err) console.log(err);
             console.log('Server successfully added to database.')
         })
@@ -61,7 +61,7 @@ function start(client) {
     // Deleting the server from the database.
     client.on("guildDelete", guild => {
         console.log(`Exiting guild "${guild.name}". Removing from database..`)
-        database.query(`DELETE FROM ServerDatas WHERE serverId = '${guild.id}';`, err => {
+        database.query(`DELETE FROM serverdatas WHERE serverId = '${guild.id}';`, err => {
             if (err) console.log(err);
             console.log('Server successfully removed from the database.')
         })
