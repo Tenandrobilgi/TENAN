@@ -7,7 +7,7 @@ const { checkForMaintenance } = require('../checkForMaintenance')
 
 function getServerLogChannel(channel) {
     return new Promise(function (resolve, reject) {
-        database.query(`SELECT serverLogChannelID FROM ServerDatas WHERE serverId = '${channel.guild.id}'`, function (err, rows) {
+        database.query(`SELECT serverLogChannelID FROM serverdatas WHERE serverId = '${channel.guild.id}'`, function (err, rows) {
             if (err) {
                 console.log(err);
                 reject(err);
@@ -20,7 +20,7 @@ function getServerLogChannel(channel) {
 
 function getServerLogEnabled(channel) {
     return new Promise(function (resolve, reject) {
-        database.query(`SELECT serverLogEnabled FROM ServerDatas WHERE serverId = '${channel.guild.id}'`, function (err, rows) {
+        database.query(`SELECT serverLogEnabled FROM serverdatas WHERE serverId = '${channel.guild.id}'`, function (err, rows) {
             if (err) {
                 console.log(err);
                 reject(err);
