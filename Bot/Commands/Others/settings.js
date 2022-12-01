@@ -48,7 +48,7 @@ async function changeSettings(message, interaction, setting, args) {
             guildId = message.guild.id
         }
 
-        database.query(`UPDATE serverDatas SET serverPrefix = '${args[0]}' WHERE ServerId = '${guildId}'`, err => {
+        database.query(`UPDATE serverdatas SET serverPrefix = '${args[0]}' WHERE ServerId = '${guildId}'`, err => {
             if (err) {
                 console.log(err);
             } else if (interaction) {
@@ -114,7 +114,7 @@ async function changeSettings(message, interaction, setting, args) {
                         guildId = message.guild.id
                     }
 
-                    database.query(`UPDATE ServerDatas SET serverModules = '${JSON.stringify(ModuleData)}' WHERE ServerId = '${guildId}'`, err => {
+                    database.query(`UPDATE serverdatas SET serverModules = '${JSON.stringify(ModuleData)}' WHERE ServerId = '${guildId}'`, err => {
                         if (err) {
                             console.log(err);
                             reject(err)
@@ -155,7 +155,7 @@ async function changeSettings(message, interaction, setting, args) {
                         guildId = message.guild.id
                     }
 
-                    database.query(`UPDATE ServerDatas SET serverModules = '${JSON.stringify(ModuleData)}' WHERE ServerId = '${guildId}'`, err => {
+                    database.query(`UPDATE serverdatas SET serverModules = '${JSON.stringify(ModuleData)}' WHERE ServerId = '${guildId}'`, err => {
                         if (err) {
                             console.log(err);
                             reject(err)
@@ -195,7 +195,7 @@ async function changeSettings(message, interaction, setting, args) {
                         guildId = message.guild.id
                     }
 
-                    database.query(`UPDATE ServerDatas SET customResponse = 'true' WHERE ServerId = '${guildId}'`, err => {
+                    database.query(`UPDATE serverdatas SET customResponse = 'true' WHERE ServerId = '${guildId}'`, err => {
                         if (err) {
                             console.log(err);
                             reject(err)
@@ -232,7 +232,7 @@ async function changeSettings(message, interaction, setting, args) {
                         guildId = message.guild.id
                     }
 
-                    database.query(`UPDATE ServerDatas SET customResponse = 'false' WHERE ServerId = '${guildId}'`, err => {
+                    database.query(`UPDATE serverdatas SET customResponse = 'false' WHERE ServerId = '${guildId}'`, err => {
                         if (err) {
                             console.log(err);
                             reject(err)
@@ -276,7 +276,7 @@ async function changeSettings(message, interaction, setting, args) {
                             guildId = message.guild.id
                         }
 
-                        database.query(`UPDATE ServerDatas SET serverLogEnabled = 'true' WHERE ServerId = '${guildId}'`, err => {
+                        database.query(`UPDATE serverdatas SET serverLogEnabled = 'true' WHERE ServerId = '${guildId}'`, err => {
                             if (err) {
                                 console.log(err);
                                 reject(err)
@@ -313,7 +313,7 @@ async function changeSettings(message, interaction, setting, args) {
                     }
 
                     return new Promise(function (resolve, reject) {
-                        database.query(`UPDATE ServerDatas SET serverLogEnabled = 'false' WHERE ServerId = '${guildId}'`, err => {
+                        database.query(`UPDATE serverdatas SET serverLogEnabled = 'false' WHERE ServerId = '${guildId}'`, err => {
                             if (err) {
                                 console.log(err);
                                 reject(err)
@@ -382,7 +382,7 @@ async function changeSettings(message, interaction, setting, args) {
 
             function sendData() {
                 return new Promise(function (resolve, reject) {
-                    database.query(`UPDATE ServerDatas SET serverLogChannelID = '${logchannel}' WHERE ServerId = '${guild.id}'`, err => {
+                    database.query(`UPDATE serverdatas SET serverLogChannelID = '${logchannel}' WHERE ServerId = '${guild.id}'`, err => {
                         if (err) {
                             console.log(err);
                             reject(err)
