@@ -10,7 +10,7 @@ function isModuleEnabled(message, interaction, databaseTable) {
         }
         if (!guildId) reject("isModuleEnabled: guildId cannot be found.")
 
-        database.query(`SELECT serverModules FROM ServerDatas WHERE serverId = '${guildId}'`, function (err, rows) {
+        database.query(`SELECT serverModules FROM serverdatas WHERE serverId = '${guildId}'`, function (err, rows) {
             if (err) {
                 reject(err)
                 throw err;
@@ -36,7 +36,7 @@ function getBotPrefix(message, interaction) {
         }
         if (!guildId) reject("getBotPrefix: guildId cannot be found.")
 
-        database.query(`SELECT serverPrefix FROM ServerDatas WHERE serverId = '${guildId}'`, function (err, rows) {
+        database.query(`SELECT serverPrefix FROM serverdatas WHERE serverId = '${guildId}'`, function (err, rows) {
             if (err) {
                 console.log(err);
                 reject(err)
