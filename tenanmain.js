@@ -15,7 +15,7 @@ global.client = new Discord.Client({
 
 // Mysql Database configuration and handling
 
-const mysql = require('mysql')
+const mysql = require('mysql2')
 const fs = require('fs');
 
 const database_config = {
