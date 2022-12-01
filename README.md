@@ -68,8 +68,7 @@ Fill out the values above with your database information. [(Examples and more in
 
 Before running the bot, connect to your database either using an app or your terminal/client and run the command below:
 
-```CREATE TABLE `[YOURDATABASENAME]`.`serverdatas` ( `serverId` VARCHAR(20), `serverPrefix` VARCHAR(2), `serverModules` TEXT(500), `serverLogChannelID` VARCHAR(20), `serverLogEnabled` VARCHAR(8), `customResponse` VARCHAR(8) ); 
-```
+```CREATE TABLE `[YOURDATABASENAME]`.`serverdatas` ( `serverId` VARCHAR(20), `serverPrefix` VARCHAR(2), `serverModules` TEXT(500), `serverLogChannelID` VARCHAR(20), `serverLogEnabled` VARCHAR(8), `customResponse` VARCHAR(8) );```
 
 ## 📝 Commands
 > The default prefix is: "."
