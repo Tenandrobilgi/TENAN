@@ -36,7 +36,7 @@ async function handleDisconnect() {
         // The server is either down or restarting.
         database.connect(function (err) {                  
             if (err) {                                       
-                //console.log('Error when connecting to database:', err);
+                console.log('Error when connecting to database:', err);
                 setTimeout(handleDisconnect, 2000)
                  // We introduce a delay before attempting to reconnect, to avoid a hot loop, and to allow our node script to process asynchronous requests in the meantime.
             }
