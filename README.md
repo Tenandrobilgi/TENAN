@@ -50,6 +50,8 @@ npm install
 <br>`"DEFAULTPREFIX"`: Bot's default prefix.
 <br>`"TIMEOUTWAITAMOUNT"`: The amount of time that users have to wait to run a command again.</br>
 
+## 📊 MySQL Database Configuration
+
 **`mysqlconfig.json`:**
 
 ```json
@@ -62,7 +64,12 @@ npm install
 }
 ```
 
-You can fill out the values above from the examples and values shown [here.](https://www.npmjs.com/package/mysql)
+Fill out the values above with your database information. [(Examples and more info).](https://www.npmjs.com/package/mysql)
+
+Before running the bot, connect to your database either using an app or your terminal/client and run the command below:
+
+```CREATE TABLE `[YOURDATABASENAME]`.`serverdatas` ( `serverId` VARCHAR(20), `serverPrefix` VARCHAR(2), `serverModules` TEXT(500), `serverLogChannelID` VARCHAR(20), `serverLogEnabled` VARCHAR(8), `customResponse` VARCHAR(8) ); 
+```
 
 ## 📝 Commands
 > The default prefix is: "."
