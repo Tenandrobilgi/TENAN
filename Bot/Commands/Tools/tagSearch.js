@@ -224,8 +224,6 @@ function getRandomPost(message, interaction, tags, website, buttonsEnabled, resp
         if (bannedTag) return errorMessage(undefined, message, "Blacklisted")
     }
 
-    console.log([...tags])
-
     Booru.search(website, [...tags], { limit: 1, random: true })
         .then(posts => {
             if (!posts || posts.length == 0) {
