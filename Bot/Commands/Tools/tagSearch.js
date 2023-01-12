@@ -4,7 +4,7 @@ const Discord = require('discord.js')
 const Booru = require('booru');
 
 const bannedTags = []
-// Example tags: ["loli", "shota", "scat"]
+// Example tags: ["loli", "shota", "scat", "cub"]
 
 ////// Internal Functions
 
