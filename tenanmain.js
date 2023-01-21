@@ -112,7 +112,7 @@ function startModules() {
     });
 }
 
-client.on('ready', async () => {
+client.on('ready', () => {
     startModules()
     console.log('Online!');
 
