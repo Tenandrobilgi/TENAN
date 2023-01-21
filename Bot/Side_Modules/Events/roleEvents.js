@@ -183,6 +183,11 @@ function start(client) {
                 embed.addFields([{ name: 'Allow anyone to @mention this role', value: `${oldval} -> ${newval}` },])
             }
 
+            if (embed.data.fields.length <= 1) { // If the role data didn't have any values above updated then return 
+                embed = null
+                return
+            }
+
             let logChannel = newRole.guild.channels.cache.get(channelId)
             if (!logChannel) {
                 let firstChannel = newRole.guild.channels.cache.filter(chx => chx.type === "text").find(x => x.position === 0);
